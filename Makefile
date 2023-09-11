@@ -4,3 +4,6 @@ setup:
 	pip install -r requirements.txt
 	# pip install -r requirements-dev.txt
 	pip install -e .
+
+start:
+	streamlit run app.py --server.port 8501
