@@ -39,6 +39,8 @@ if workload_type == "Application":
     st.dataframe(df)
     st.pyplot(create_chart(df))
 elif workload_type == "Spark Jobs":
+    st.divider()
+
     regular_spot_price = calculate_spark_job_regular_spot_price(
         cpu=cpu,
         memory=memory,
