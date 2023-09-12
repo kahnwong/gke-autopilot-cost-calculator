@@ -9,6 +9,11 @@ from gke_autopilot_cost_calculator.workload_spark_job import (
     calculate_spark_job_scale_out_arm_spot_price,
 )
 
+st.set_page_config(
+    page_title="GKE Autopilot Cost Calculator",
+    page_icon="⎈",
+)
+
 
 st.title("GKE Autopilot Cost Calculator")
 
@@ -34,10 +39,12 @@ with st.sidebar:
 st.write("Region: asia-southeast1")
 st.write("Unit: USD")
 
+# ---------- Application ---------- #
 if workload_type == "Application":
     df = create_dataframe(cpu=cpu, memory=memory)
     st.dataframe(df)
     st.pyplot(create_chart(df))
+# ---------- Spark Job ---------- #
 elif workload_type == "Spark Jobs":
     st.divider()
 
