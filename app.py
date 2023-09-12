@@ -28,7 +28,7 @@ with st.sidebar:
             label="Executors", min_value=1, max_value=100, step=1
         )
         job_duration_seconds = st.number_input(
-            label="Job Duration (Minute)", min_value=1, max_value=1000, step=1
+            label="Job Duration (Minute)", min_value=1, step=1
         )
 
 st.write("Region: asia-southeast1")
