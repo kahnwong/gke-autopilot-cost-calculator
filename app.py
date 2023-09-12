@@ -47,7 +47,7 @@ elif workload_type == "Spark Jobs":
         executors=executors,
         job_duration_seconds=job_duration_seconds,
     )
-    st.write(f"Regular-Spot Price: {regular_spot_price:.20f}")
+    st.write(f"Regular Spot Price: {regular_spot_price:.20f}")
 
     scale_out_arm_spot_price = calculate_spark_job_scale_out_arm_spot_price(
         cpu=cpu,
@@ -55,4 +55,4 @@ elif workload_type == "Spark Jobs":
         executors=executors,
         job_duration_seconds=job_duration_seconds,
     )
-    st.write(f"Regular-Spot Price: {scale_out_arm_spot_price:.20f}")
+    st.write(f"Scale-Out ARM Spot Price: {scale_out_arm_spot_price:.20f}")
