@@ -23,8 +23,8 @@ st.title("GKE Autopilot Cost Calculator")
 
 
 with st.sidebar:
-    cpu = st.slider(label="cpu", min_value=0.25, max_value=8.0, step=0.25)
-    memory = st.slider(label="memory", min_value=64, max_value=8 * 1024, step=64)
+    cpu = st.number_input(label="cpu", min_value=0.25, max_value=8.0, step=0.25)
+    memory = st.number_input(label="memory", min_value=0.5, max_value=8.0, step=0.5)
 
 st.write("Region: asia-southeast1")
 st.write("Unit: USD")
