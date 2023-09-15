@@ -1,3 +1,18 @@
+[tool.poetry]
+name = "gke-autopilot-cost-calculator"
+version = "0.1.0"
+description = ""
+authors = ["kahnwong <karn@karnwong.me>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+matplotlib = "3.7.2"
+pandas = "2.1.0"
+pydantic = "2.3.0"
+seaborn = "0.12.2"
+streamlit = "1.26.0"
+
 [build-system]
-requires = ["setuptools"]
-build-backend = "setuptools.build_meta"
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
