@@ -32,7 +32,7 @@ with st.sidebar:
         executors = st.number_input(
             label="Executors", min_value=1, max_value=100, step=1
         )
-        job_duration_seconds = st.number_input(
+        job_duration_minutes = st.number_input(
             label="Job Duration (Minute)", min_value=1, step=1
         )
 
@@ -52,7 +52,7 @@ elif workload_type == "Spark Jobs":
         cpu=cpu,
         memory=memory,
         executors=executors,
-        job_duration_seconds=job_duration_seconds,
+        job_duration_minutes=job_duration_minutes,
     )
     st.write(f"Regular Spot Price: {regular_spot_price:.20f}")
 
@@ -60,6 +60,6 @@ elif workload_type == "Spark Jobs":
         cpu=cpu,
         memory=memory,
         executors=executors,
-        job_duration_seconds=job_duration_seconds,
+        job_duration_minutes=job_duration_minutes,
     )
     st.write(f"Scale-Out ARM Spot Price: {scale_out_arm_spot_price:.20f}")
