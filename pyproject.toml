@@ -9,7 +9,7 @@ readme = "README.md"
 python = "^3.11"
 matplotlib = "3.8.0"
 pandas = "2.1.0"
-pydantic = "2.3.0"
+pydantic = "2.4.2"
 seaborn = "0.12.2"
 streamlit = "1.26.0"
 
